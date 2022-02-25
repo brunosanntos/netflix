@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import tmdb from './tmdb';
+import MovieRow from "./components/MovieRow";
 
 export default () => {
 
@@ -8,6 +9,7 @@ export default () => {
     useEffect (() => {
         const loadAll = async () => {
             // Pegando os dados da API
+            console.log()
             let list = await tmdb.getHomeList();
             setMovieList(list);
         }
@@ -19,9 +21,7 @@ export default () => {
         <div className="page">
             <section className="lists">
                 {movielist.map((item, key) => (
-                    <div>
-                        {item.title}
-                    </div>
+                    <MovieRow key={key} title={item.title} item={item.items}/>
                 ))}
             </section>
         </div>
