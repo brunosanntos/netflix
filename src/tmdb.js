@@ -28,6 +28,7 @@ const basicFetch = async (endpoint) => {
 }
 
 export default {
+
     getHomeList: async () => {
         return [
             {
@@ -49,16 +50,20 @@ export default {
             {
                 // Categoria
                 slug: 'trending',
+
                 //Titulo do filme (exibição)
                 title: 'Recomendados para Você',
+
                 //Array para retornar os dados
                 items: await basicFetch(`/trending/all/week?&language=pt-BR&api_key=${API_KEY}`)
             },
             {
                 // Categoria
                 slug: 'action',
+
                 //Titulo do filme (exibição)
                 title: 'Ação',
+
                 //Array para retornar os dados
                 items: await basicFetch(`/discover/movie?with_genres=28&language=pt-BR&api_key=${API_KEY}`)
             },
