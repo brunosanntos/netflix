@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 
 import tmdb from './utils/tmdb';
-import MovieRow from "./components/MovieRow";
-import FeatureMovie from "./components/FeatureMovie";
-import Header from './components/Header'
+import MovieRow from "./components/MovieRow/Index";
+import FeatureMovie from "./components/FeatureMovie/Index";
+import Header from './components/Header/Index'
 
 import './App.css'
 
